@@ -1,10 +1,13 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-export const index = () => {
-  return (
-    <div>
+import "./style/index.css";
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
       <App />
-    </div>
-  );
-};
-export default index;
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.querySelector("#root")
+);
